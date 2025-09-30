@@ -1,0 +1,16 @@
+pub fn get_versions() {
+    versions::from_github("sigstore/cosign")
+}
+
+pub fn install_app(env) {
+    sources::from_file(`https://github.com/sigstore/cosign/releases/download/v${env.version}/cosign-linux-amd64`);
+    modify::set_exec("cosign-linux-amd64");
+}
+
+pub fn binaries(env) {
+    [("cosign", "cosign-linux-amd64")]
+}
+
+pub fn post_install(env) {
+
+}

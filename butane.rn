@@ -1,0 +1,16 @@
+pub fn get_versions() {
+    versions::from_github("coreos/butane")
+}
+
+pub fn install_app(env) {
+    sources::from_file(`https://github.com/coreos/butane/releases/download/v${env.version}/butane-x86_64-unknown-linux-gnu`);
+    modify::set_exec("butane-x86_64-unknown-linux-gnu");
+}
+
+pub fn binaries(env) {
+    [("butane", "butane-x86_64-unknown-linux-gnu")]
+}
+
+pub fn post_install(env) {
+
+}

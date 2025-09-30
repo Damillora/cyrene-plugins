@@ -1,0 +1,15 @@
+pub fn get_versions() {
+    versions::from_github("gohugoio/hugo")
+}
+
+pub fn install_app(env) {
+    sources::from_tar_gz(`https://github.com/gohugoio/hugo/releases/download/v${env.version}/hugo_extended_withdeploy_${env.version}_linux-amd64.tar.gz`);
+}
+
+pub fn binaries(env) {
+    [("hugo", "hugo")]
+}
+
+pub fn post_install(env) {
+
+}

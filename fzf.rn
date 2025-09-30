@@ -1,0 +1,15 @@
+pub fn get_versions() {
+    versions::from_github("junegunn/fzf")
+}
+
+pub fn install_app(env) {
+    sources::from_tar_gz(`https://github.com/junegunn/fzf/releases/download/v${env.version}/fzf-${env.version}-linux_amd64.tar.gz`);
+}
+
+pub fn binaries(env) {
+    [("fzf", "fzf")]
+}
+
+pub fn post_install(env) {
+
+}

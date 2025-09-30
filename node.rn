@@ -1,0 +1,20 @@
+pub fn get_versions() {
+    let response = versions::from_json("https://nodejs.org/dist/index.json");
+    let versions = response.iter().map(|e| e.version).collect::<Vec>();
+    versions
+}
+
+pub fn install_app(env) {
+    sources::from_tar_xz(`https://nodejs.org/dist/v${env.version}/node-v${env.version}-linux-x64.tar.xz`);
+}
+
+pub fn binaries(env) {
+    [("node", `node-v${env.version}-linux-x64/bin/node`),
+    ("corepack", `node-v${env.version}-linux-x64/bin/corepack`),
+    ("npx", `node-v${env.version}-linux-x64/bin/npx`),
+    ("npm", `node-v${env.version}-linux-x64/bin/npm`)]
+}
+
+pub fn post_install(env) {
+
+}
