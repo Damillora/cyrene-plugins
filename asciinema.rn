@@ -1,0 +1,16 @@
+pub fn get_versions() {
+    versions::from_github("asciinema/asciinema")
+}
+
+pub fn install_app(env) {
+    sources::from_file(`https://github.com/asciinema/asciinema/releases/download/v${env.version}/asciinema-x86_64-unknown-linux-gnu`);
+    modify::set_exec("asciinema-x86_64-unknown-linux-gnu");
+}
+
+pub fn binaries(env) {
+    [("asciinema", "asciinema-x86_64-unknown-linux-gnu")]
+}
+
+pub fn post_install(env) {
+
+}

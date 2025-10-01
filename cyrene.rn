@@ -1,0 +1,15 @@
+pub fn get_versions() {
+    versions::from_github("Damillora/cyrene")
+}
+
+pub fn install_app(env) {
+    sources::from_tar_xz(`https://github.com/Damillora/cyrene/releases/download/v${env.version}/cyrene-x86_64-unknown-linux-gnu.tar.xz`);
+}
+
+pub fn binaries(env) {
+    [("cyrene", "cyrene-x86_64-unknown-linux-gnu/cyrene")]
+}
+
+pub fn post_install(env) {
+
+}
