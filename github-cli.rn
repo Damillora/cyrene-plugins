@@ -1,0 +1,15 @@
+pub fn get_versions() {
+    versions::from_github("cli/cli")
+}
+
+pub fn install_app(env) {
+    sources::from_tar_gz(`https://github.com/cli/cli/releases/download/v${env.version}/gh_${env.version}_linux_amd64.tar.gz`);
+}
+
+pub fn binaries(env) {
+    [("gh", `gh_${env.version}_linux_amd64/bin/gh`)]
+}
+
+pub fn post_install(env) {
+
+}
