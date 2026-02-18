@@ -1,0 +1,15 @@
+pub fn get_versions() {
+    versions::from_github("oven-sh/bun")
+}
+
+pub fn install_app(env) {
+    sources::from_zip(`https://github.com/oven-sh/bun/releases/download/bun-v${env.version}/bun-linux-x64.zip`)
+}
+
+pub fn binaries(env) {
+    [("bun", "bun-linux-x64/bun")]
+}
+
+pub fn post_install(env) {
+
+}
