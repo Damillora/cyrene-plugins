@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "casey/just"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/casey/just/releases/download/${version}/just-${version}-x86_64-unknown-linux-musl.tar.gz"
+
+[binaries]
+just = "just"

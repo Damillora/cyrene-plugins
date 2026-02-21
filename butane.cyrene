@@ -1,0 +1,17 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "coreos/butane"
+
+[[sources]]
+type = "file"
+url = "https://github.com/coreos/butane/releases/download/v${version}/butane-x86_64-unknown-linux-gnu"
+
+[binaries]
+butane = "butane-x86_64-unknown-linux-gnu"
+
+[[post_install]]
+type = "set_exec"
+path = "butane-x86_64-unknown-linux-gnu"

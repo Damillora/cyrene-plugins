@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "oven-sh/bun"
+
+[[sources]]
+type = "zip"
+url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64.zip"
+
+[binaries]
+bun = "bun-linux-x64/bun"

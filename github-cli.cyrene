@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "cli/cli"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/cli/cli/releases/download/v${version}/gh_${version}_linux_amd64.tar.gz"
+
+[binaries]
+gh = "gh_${version}_linux_amd64/bin/gh"

@@ -1,0 +1,17 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "asciinema/asciinema"
+
+[[sources]]
+type = "file"
+url = "https://github.com/asciinema/asciinema/releases/download/v${version}/asciinema-x86_64-unknown-linux-gnu"
+
+[binaries]
+asciinema = "asciinema-x86_64-unknown-linux-gnu"
+
+[[post_install]]
+type = "set_exec"
+path = "asciinema-x86_64-unknown-linux-gnu"

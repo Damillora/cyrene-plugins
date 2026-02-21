@@ -1,0 +1,17 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "LostRuins/koboldcpp"
+
+[[sources]]
+type = "file"
+url = "https://github.com/LostRuins/koboldcpp/releases/download/v${version}/koboldcpp-linux-x64-nocuda"
+
+[binaries]
+koboldcpp = "koboldcpp-linux-x64-nocuda"
+
+[[post_install]]
+type = "set_exec"
+path = "koboldcpp-linux-x64-nocuda"

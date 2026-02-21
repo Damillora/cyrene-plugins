@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "zed-industries/zed"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/zed-industries/zed/releases/download/v${version}/zed-linux-x86_64.tar.gz"
+
+[binaries]
+zed = "zed.app/bin/zed"

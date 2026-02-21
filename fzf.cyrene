@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "junegunn/fzf"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/junegunn/fzf/releases/download/v${version}/fzf-${version}-linux_amd64.tar.gz"
+
+[binaries]
+fzf = "fzf"

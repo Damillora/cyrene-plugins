@@ -1,0 +1,22 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "url"
+url = "https://go.dev/dl/?mode=json&include=all"
+
+[[versions.command]]
+type = "jsonpath"
+query = "$[*].version"
+
+[[versions.command]]
+type = "strip_prefix"
+prefix = "go"
+
+[[sources]]
+type = "tar_gz"
+url = "https://go.dev/dl/go${version}.linux-amd64.tar.gz"
+
+[binaries]
+go = "go/bin/go"
+gofmt = "go/bin/gofmt"

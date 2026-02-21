@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "neovim/neovim"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/neovim/neovim/releases/download/v${version}/nvim-linux-x86_64.tar.gz"
+
+[binaries]
+nvim = "nvim-linux-x86_64/bin/nvim"

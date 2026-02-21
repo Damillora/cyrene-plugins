@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "Damillora/flora"
+
+[[sources]]
+type = "tar_xz"
+url = "https://github.com/Damillora/flora/releases/download/v${version}/flora_cli-x86_64-unknown-linux-gnu.tar.xz"
+
+[binaries]
+flora = "flora_cli-x86_64-unknown-linux-gnu/flora"

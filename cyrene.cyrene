@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "Damillora/cyrene"
+
+[[sources]]
+type = "tar_xz"
+url = "https://github.com/Damillora/cyrene/releases/download/v${version}/cyrene-x86_64-unknown-linux-gnu.tar.xz"
+
+[binaries]
+cyrene = "cyrene_cli-x86_64-unknown-linux-gnu/flora"

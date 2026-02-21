@@ -1,0 +1,17 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "twpayne/chezmoi"
+
+[[sources]]
+type = "file"
+url = "https://github.com/twpayne/chezmoi/releases/download/v${version}/chezmoi-linux-amd64"
+
+[binaries]
+chezmoi = "chezmoi-linux-amd64"
+
+[[post_install]]
+type = "set_exec"
+path = "chezmoi-linux-amd64"

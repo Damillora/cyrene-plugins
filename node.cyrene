@@ -1,0 +1,20 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "url"
+url = "https://nodejs.org/dist/index.json"
+
+[[versions.command]]
+type = "jsonpath"
+query = "$[*].version"
+
+[[sources]]
+type = "tar_xz"
+url = "https://nodejs.org/dist/v${version}/node-v${version}-linux-x64.tar.xz"
+
+[binaries]
+node = "node-v${version}-linux-x64/bin/node"
+corepack = "node-v${version}-linux-x64/bin/corepack"
+npx = "node-v${version}-linux-x64/bin/npx"
+npm = "node-v${version}-linux-x64/bin/npm"

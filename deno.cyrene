@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "denoland/deno"
+
+[[sources]]
+type = "zip"
+url = "https://github.com/denoland/deno/releases/download/v${version}/deno-x86_64-unknown-linux-gnu.zip"
+
+[binaries]
+deno = "deno"

@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "securego/gosec"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/securego/gosec/releases/download/v${version}/gosec_${version}_linux_amd64.tar.gz"
+
+[binaries]
+gosec = "gosec"

@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = false
+
+[versions]
+type = "github"
+repo = "fish-shell/fish-shell"
+
+[[sources]]
+type = "tar_xz"
+url = "https://github.com/fish-shell/fish-shell/releases/download/${version}/fish-${version}-linux-x86_64.tar.xz"
+
+[binaries]
+fish = "fish"

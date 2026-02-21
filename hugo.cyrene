@@ -1,0 +1,13 @@
+[settings]
+upgrade_latest = true
+
+[versions]
+type = "github"
+repo = "gohugoio/hugo"
+
+[[sources]]
+type = "tar_gz"
+url = "https://github.com/gohugoio/hugo/releases/download/v${version}/hugo_extended_withdeploy_${version}_linux-amd64.tar.gz"
+
+[binaries]
+hugo = "hugo"
