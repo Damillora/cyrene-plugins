@@ -1,25 +1,23 @@
 # cyrene-plugins
 
+> The `main` branch contains plugins for the git version of `cyrene`. Plugins for version `0.3` lives in the `0.3` branch.
+
 Plugins for [cyrene](https://github.com/Damillora/cyrene), as I've written.
 
 ## Installation
 
 ```
-mkdir -p .local/share/cyrene/plugins
-git clone https://github.com/Damillora/cyrene-plugins
+mkdir -p $HOME/.local/share/cyrene
+git clone https://github.com/Damillora/cyrene-plugins $HOME/.local/share/cyrene/plugins
 ```
 
 ## Writing a plugin
 
-cyrene plugins are scripts written in the [Rune](https://rune-rs.github.io/) scripting language.
+cyrene plugins are configured using TOML.
 
 cyrene plugins are mainly concerned with two things: querying available versions, and installing a single version of an application. `cyrene` will handle version management.
 
-For most uses, cyrene plugins are pretty simple to write. `cyrene` itself provides several helper functions so that e.g. querying GitHub releases is a function call away.
-
-However, because cyrene plugins are written in a full scripting language, plugins using custom APIs, such as [the plugin for Node.js](node.rn), are more easily achievable.
-
-For a simple example, check out [the plugin](flora.rn) for [flora](https://github.com/Damillora/flora), a command-line Wine prefix manager.
+For a simple example, check out [the plugin](flora.cyrene) for [flora](https://github.com/Damillora/flora), a command-line Wine prefix manager.
 
 ## Contributing
 
