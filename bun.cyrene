@@ -5,6 +5,10 @@ upgrade_latest = false
 type = "github"
 repo = "oven-sh/bun"
 
+[[versions.command]]
+type = "strip_prefix"
+prefix = "bun-v"
+
 [[sources]]
 type = "zip"
 url = "https://github.com/oven-sh/bun/releases/download/bun-v${version}/bun-linux-x64.zip"
