@@ -1,6 +1,6 @@
 # cyrene-plugins
 
-> The `main` branch contains plugins for the git version of `cyrene`. Plugins for version `0.3` lives in the `0.3` branch.
+> The `main` branch contains plugins for `cyrene` version `0.4` or later. Plugins for version `0.3` lives in the `0.3` branch.
 
 Plugins for [cyrene](https://github.com/Damillora/cyrene), as I've written.
 
